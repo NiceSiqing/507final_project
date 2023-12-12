@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Comparison</title>
+</head>
+<body>
+    <h1>Hotel Comparison</h1>
+
+    <table>
+        <tr>
+            <th>Hotel Name</th>
+            <th>Price</th>
+            <th>Amenities</th>
+        </tr>
+        {% for hotel in hotels.itertuples() %}
+        <tr>
+            <td>{{ hotel.Hotel_Names }}</td>
+            <td>{{ hotel.Price }}</td>
+            <td>{{ hotel.Amenities }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

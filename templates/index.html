@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Data Visualization</title>
+</head>
+<body>
+    <h1>Choose a City to Explore Hotels</h1>
+    <form action="/city_hotels" method="get">
+        <label for="city">City:</label>
+        <select name="city" id="city">
+            {% for city in cities %}
+            <option value="{{ city }}">{{ city }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Show Hotels">
+    </form>
+
+    <!-- Data Visualization Buttons -->
+    <button onclick="location.href='/visualization/city_hotel_count'">Hotel Count by City</button>
+    <button onclick="location.href='/visualization/rating_distribution'">Hotel Rating Distribution</button>
+    <button onclick="location.href='/visualization/hotel_details'">Hotel Details</button>
+    <button onclick="location.href='/visualization/hotel_comparison'">Hotel Comparison</button>
+    <button onclick="location.href='/visualization/rating_reviews'">Hotel Ratings vs. Reviews</button>
+
+    <!-- Add a button to view hotel graph structure -->
+    <button onclick="location.href='/graph'">View Hotel Graph Structure</button>
+</body>
+</html>
